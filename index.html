@@ -6,21 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="style.css">
-    <script src=" app.js"></script>
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
-    <header class="bgcolor5 color3">
-        <h1>Encriptador de texto</h1>
+    <header>
+        <img src="imagenes/Vector.png">
     </header>
     <main>
         <div class="grid-layout">
             <div class="container-ingreso">
-                <textarea class="textarea" name="" id="texto-ingresado" placeholder="Ingrese el texto aqui"></textarea>
-                <div class="error-message color5">
-                    !Solo letras minúsculas y sin acentos¡.
-                </div>
+                <textarea class="textarea" name="" id="texto-ingresado" rows="13"
+                    placeholder="Ingrese el texto aqui"></textarea>
+                <small class="color-blanco">!Solo letras minusculas y sin acentos.</small>
                 <div class="botones">
                     <button id="btn-encriptar" class="btn"><span>Encriptar</span></button>
                     <button id="btn-desencriptar" class="btn"><span>Desencriptar</span></button>
@@ -29,16 +27,20 @@
             <div class="container-proceso">
                 <div id="primera-pantalla">
                     <img class="imagen" src="imagenes/Muñeco.png" alt="">
-                    <p>Ningun mensaje fue encontrado</p>
-                    <span>Ingrese el texto que desea encriptar o desencriptar</span>
+                    <p class="color-blanco">Ningun mensaje fue encontrado</p>
+                    <span class="color-blanco">Ingrese el texto que desea encriptar o desencriptar</span>
                 </div>
                 <div id="segunda-pantalla">
-                    <textarea name="" id="texto-procesado" cols="30" rows="10" disabled=""></textarea>
+                    <textarea name="" id="texto-procesado" rows="13" readonly></textarea>
                     <button id="btn-copiar" class="btn"><span>Copiar</span></button>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="bgcolor5 color3""><span>Jhohan Mendez &copy 2023</span></footer>
+    <footer><span>Jhohan Mendez &copy 2023</span></footer>
 </body>
+
+<script src=" app2.js">
+</script>
+
 </html>
