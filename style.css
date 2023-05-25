@@ -1,0 +1,166 @@
+.oculto {
+  display: none;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #404040;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #404040;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #404040;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.grid-layout {
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-ingreso {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-color: #404040;
+}
+
+.container-proceso {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.color-blanco {
+  color: #fff;
+}
+
+textarea {
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #404040;
+}
+
+textarea::placeholder {
+  color: #fff;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#segunda-pantalla textarea {
+  background-color: #fff;
+  color: #404040;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#primera-pantalla {
+  color: #fff;
+}
+
+.botones {
+  margin: 10px 0;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #fff;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.btn:active {
+  background: var(--color);
+  color: #404040;
+}
+
+#btn-copiar {
+  margin: 1rem;
+}
+
+.imagen {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+  .grid-layout {
+    grid-template-columns: auto;
+  }
+
+  .botones {
+    width: 100%;
+  }
+
+  #primera-pantalla {
+    display: none;
+  }
+
+  #segunda-pantalla {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
